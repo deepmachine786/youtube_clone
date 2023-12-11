@@ -1,9 +1,3 @@
-//const api = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=tesla&type=video&key=[YOUR_API_KEY]"
-// AIzaSyA4JYnLGfsjePGEdB5Lnf0_j6aGWy60dJE
-
-// working key ===  AIzaSyAAxqIfYekCergIZloTSLg-_HaxU_OVoFg
-// 
-
 
 const result_div = document.querySelector("#search_results");
 
