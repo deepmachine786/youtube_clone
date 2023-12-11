@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./video.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="header_left" onclick="window.location.href='index.html'">
+            <i class="material-icons">menu</i>
+            <img onclick="index.html" src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt="">
+        </div>
+
+        <div class="searchBox">
+            <input id="video" type="text" placeholder="Search">
+            <button onclick="searchVideo()"><i class="material-icons">search</i></button>
+        </div>
+
+        <div class="header_icons">
+            <i class="material-icons">videocam</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <i class="material-icons">account_circle</i>
+        </div>
+
+    </div>
+
+
+    <div class="mainBody">
+
+        <div class="sidebar">
+            <div class="sidebar_categories">
+
+                <div class="sidebar_category">
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">local_fire_department</i>
+                    <span>Trending</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">subscriptions</i>
+                    <span>Subscriptions</span>
+                </div>
+            </div>
+            <hr>
+
+            <div class="sidebar_categories">
+                <div class="sidebar_category">
+                    <i class="material-icons">library_add_check</i>
+                    <span>Library</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">history</i>
+                    <span>History</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">play_arrow</i>
+                    <span>Your Videos</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">watch_later</i>
+                    <span>Watch Later</span>
+                </div>
+
+                <div class="sidebar_category">
+                    <i class="material-icons">thumb_up</i>
+                    <span>Liked Videos</span>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+
+        <div id="main">
+
+            <div id="video_details"></div>
+            <div id="recomm"></div>
+        </div>
+
+</body>
+
+</html>
+
+<script type="module">
+
+    let data = JSON.parse(localStorage.getItem("videos"));
+
+    console.log(data);
+
+    let video_div = document.getElementById("video_details");
+
+    let iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${data.videoId}`;
+    iframe.width = "100%";
+    iframe.height = "100%"
+    iframe.setAttribute('allowfullscreen', "true")
+    video_div.append(iframe);
+
+</script>

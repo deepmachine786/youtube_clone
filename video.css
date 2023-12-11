@@ -1,0 +1,129 @@
+#main {
+  width: 70%;
+  height: 300px;
+}
+
+#video_details {
+  flex: 3;
+  height: 600px;
+}
+
+#recomm {
+  flex: 1;
+}
+
+.input {
+  display: flex;
+}
+
+.result {
+  display: flex;
+  cursor: pointer;
+}
+
+/* ==================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.searchBox {
+  width: 40%;
+  display: flex;
+}
+
+.searchBox input {
+  width: 100%;
+  height: 30px;
+  margin-top: 3%;
+  /* border: none; */
+}
+
+.searchBox button {
+  width: 7%;
+  height: 30px;
+  margin-top: 3%;
+  border: none;
+  border-radius: 5px;
+}
+
+.material-icons {
+  color: grey;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+}
+
+.header_left img {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header i {
+  padding: 0px 7px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: -9%;
+}
+
+.mainBody {
+  display: flex;
+}
+
+.sidebar {
+  height: 100%;
+  width: 310px;
+  background-color: white;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.sidebar_categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  margin-top: 15px;
+}
+
+.sidebar_category {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+}
+
+.sidebar_category span {
+  margin-left: 2%;
+}
+
+.sidebar_category:hover {
+  background: rgb(226, 215, 215);
+  cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  background-color: rgb(190, 198, 204);
+  border: none;
+}
